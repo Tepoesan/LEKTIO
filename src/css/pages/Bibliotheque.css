@@ -1,0 +1,168 @@
+/* Conteneur principal de la page */
+.bibliotheque {
+  width: 100%;
+  max-width: 1100px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px 20px 100px;
+  box-sizing: border-box;
+
+  /* Adapte la page au thème sélectionné */
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+}
+
+/* Place le logo et la langue sur la même ligne */
+.bibliotheque-entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+/* Titre principal de la page */
+.bibliotheque h1 {
+  margin: 0 0 18px;
+  font-size: clamp(20px, 4vw, 26px);
+}
+
+/* Conteneur permettant de placer l’icône dans le champ */
+.barre-recherche {
+  position: relative;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+/* Champ permettant de rechercher un livre */
+.recherche-livre {
+  width: 100%;
+  padding: 12px 44px 12px 16px;
+  box-sizing: border-box;
+
+  /* Adapte le champ au thème sélectionné */
+  background-color: var(--couleur-carte);
+  color: var(--couleur-texte);
+  border: 1px solid var(--couleur-bordure);
+
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Adapte le texte d’exemple du champ au thème */
+.recherche-livre::placeholder {
+  color: var(--couleur-texte);
+  opacity: 0.65;
+}
+
+/* Affiche un focus visible lorsque le champ est sélectionné */
+.recherche-livre:focus-visible {
+  border-color: var(--couleur-accent);
+  outline: 3px solid var(--couleur-accent);
+  outline-offset: 2px;
+}
+
+/* Positionne la loupe à droite du champ */
+.icone-recherche {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+
+  /* Adapte l’icône au thème sélectionné */
+  color: var(--couleur-texte);
+
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Affiche deux livres par ligne sur mobile */
+.grille-livres {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 18px;
+}
+
+/* Retire le style par défaut du lien */
+.lien-livre {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Affiche un focus visible autour du livre */
+.lien-livre:focus-visible {
+  outline: 3px solid var(--couleur-accent);
+  outline-offset: 5px;
+  border-radius: 8px;
+}
+
+/* Conteneur d’un livre */
+.livre {
+  min-width: 0;
+}
+
+/* Couverture du livre */
+.livre-couverture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+
+  /* Adapte la bordure au thème sélectionné */
+  border: 1px solid var(--couleur-bordure);
+
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Pourcentage de lecture */
+.livre > p:first-of-type {
+  margin: 8px 0 2px;
+  font-size: 12px;
+}
+
+/* Barre indiquant la progression du livre */
+.livre progress {
+  width: 100%;
+  height: 6px;
+
+  /* Utilise la couleur d’accentuation sélectionnée */
+  accent-color: var(--couleur-accent);
+}
+
+/* Titre du livre */
+.livre h2 {
+  margin: 10px 0 4px;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+/* Auteur du livre */
+.livre h2 + p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* Sur tablette, affiche trois livres par ligne */
+@media (min-width: 600px) {
+  .bibliotheque {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .grille-livres {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px 24px;
+  }
+}
+
+/* Sur les grands écrans, affiche quatre livres par ligne */
+@media (min-width: 900px) {
+  .bibliotheque {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+
+  .grille-livres {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 36px 28px;
+  }
+}

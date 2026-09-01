@@ -1,0 +1,56 @@
+/* Contient le réglage de la couleur d’accentuation */
+.choix-couleur-accent {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Titre du réglage */
+.choix-couleur-accent > p {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+/* Place les boutons de couleur sur une ligne */
+.boutons-couleur {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Style commun aux boutons de couleur */
+.bouton-couleur {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+/* Ajoute un contour autour de la couleur sélectionnée */
+.bouton-couleur.actif {
+  box-shadow:
+    0 0 0 2px #ffffff,
+    0 0 0 4px #7c3aed;
+}
+
+/* Rend le bouton visible pendant la navigation au clavier */
+.bouton-couleur:focus-visible {
+  outline: 3px solid rgba(124, 58, 237, 0.35);
+  outline-offset: 3px;
+}
+
+/* Réduit les espaces sur les petits écrans */
+@media (max-width: 380px) {
+  .boutons-couleur {
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .bouton-couleur {
+    width: 25px;
+    height: 25px;
+  }
+}

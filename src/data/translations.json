@@ -1,0 +1,188 @@
+{
+  "locales": ["fr", "en", "es"],
+  "translations": {
+    "nav": {
+      "library": {
+        "fr": "Ma bibliothèque",
+        "en": "My library",
+        "es": "Mi biblioteca"
+      },
+      "bookstore": {
+        "fr": "Librairie",
+        "en": "Bookstore",
+        "es": "Librería"
+      },
+      "settings": {
+        "fr": "Paramètres",
+        "en": "Settings",
+        "es": "Ajustes"
+      },
+      "search": {
+        "fr": "Rechercher un livre",
+        "en": "Search a book",
+        "es": "Buscar un libro"
+      }
+    },
+    "reading": {
+      "bookNotFound": {
+        "fr": "Livre introuvable.",
+        "en": "Book not found.",
+        "es": "Libro no encontrado."
+      },
+      "backToLibrary": {
+        "fr": "Retour à la bibliothèque",
+        "en": "Back to library",
+        "es": "Volver a la biblioteca"
+      },
+      "progress": {
+        "fr": "Progression",
+        "en": "Progress",
+        "es": "Progreso"
+      },
+      "chapter": {
+        "fr": "Chapitre",
+        "en": "Chapter",
+        "es": "Capítulo"
+      },
+      "openReadingSettings": {
+        "fr": "Ouvrir les paramètres de lecture",
+        "en": "Open reading settings",
+        "es": "Abrir los ajustes de lectura"
+      }
+    },
+    "settings": {
+      "appearance": {
+        "label": {
+          "fr": "Apparence",
+          "en": "Appearance",
+          "es": "Apariencia"
+        },
+        "theme": {
+          "label": {
+            "fr": "Thème",
+            "en": "Theme",
+            "es": "Tema"
+          },
+          "light": {
+            "fr": "Clair",
+            "en": "Light",
+            "es": "Claro"
+          },
+          "sepia": {
+            "fr": "Sépia",
+            "en": "Sepia",
+            "es": "Sepia"
+          },
+          "dark": {
+            "fr": "Sombre",
+            "en": "Dark",
+            "es": "Oscuro"
+          }
+        },
+        "accentColor": {
+          "fr": "Couleur d'accentuation",
+          "en": "Accent color",
+          "es": "Color de acento"
+        },
+        "language": {
+          "fr": "Langue d'interface",
+          "en": "Interface language",
+          "es": "Idioma de interfaz"
+        }
+      },
+      "typography": {
+        "label": {
+          "fr": "Typographie et lecture",
+          "en": "Typography & reading",
+          "es": "Tipografía y lectura"
+        },
+        "fontFamily": {
+          "label": {
+            "fr": "Police",
+            "en": "Font",
+            "es": "Fuente"
+          },
+          "serif": {
+            "fr": "Serif",
+            "en": "Serif",
+            "es": "Serif"
+          },
+          "sansSerif": {
+            "fr": "Sans serif",
+            "en": "Sans serif",
+            "es": "Sin serif"
+          },
+          "monospace": {
+            "fr": "Monospace",
+            "en": "Monospace",
+            "es": "Monoespaciada"
+          },
+          "openDys": {
+            "fr": "OpenDys",
+            "en": "OpenDys",
+            "es": "OpenDys"
+          }
+        },
+        "fontSize": {
+          "fr": "Taille du texte",
+          "en": "Text size",
+          "es": "Tamaño del texto"
+        },
+        "lineHeight": {
+          "fr": "Interlignage",
+          "en": "Line height",
+          "es": "Interlineado"
+        },
+        "letterSpacing": {
+          "fr": "Espacement des caractères",
+          "en": "Letter spacing",
+          "es": "Espaciado de letras"
+        },
+        "contentWidth": {
+          "label": {
+            "fr": "Largeur du contenu",
+            "en": "Content width",
+            "es": "Ancho del contenido"
+          },
+          "narrow": {
+            "fr": "Étroit",
+            "en": "Narrow",
+            "es": "Estrecho"
+          },
+          "normal": {
+            "fr": "Normal",
+            "en": "Normal",
+            "es": "Normal"
+          },
+          "wide": {
+            "fr": "Large",
+            "en": "Wide",
+            "es": "Amplio"
+          }
+        },
+        "readingSettings": {
+          "fr": "Paramètres de lecture",
+          "en": "Reading settings",
+          "es": "Ajustes de lectura"
+        },
+        "closeReadingSettings": {
+          "fr": "Fermer les paramètres de lecture",
+          "en": "Close reading settings",
+          "es": "Cerrar los ajustes de lectura"
+        }
+      },
+      "data": {
+        "label": {
+          "fr": "Données",
+          "en": "Data",
+          "es": "Datos"
+        },
+        "resetPreferences": {
+          "fr": "Réinitialiser les préférences",
+          "en": "Reset preferences",
+          "es": "Restablecer preferencias"
+        }
+      }
+    }
+  }
+}

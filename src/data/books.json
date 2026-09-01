@@ -1,0 +1,52 @@
+{
+  "library": [
+    {
+      "id": 1,
+      "title": "Le Petit Prince",
+      "author": "Antoine de Saint-Exupéry",
+      "coverKey": "le_petit_prince.png",
+      "readingProgress": 100,
+      "lastOpenedAt": "2026-08-01T09:14:00Z"
+    },
+    {
+      "id": 2,
+      "title": "L'Étranger",
+      "author": "Albert Camus",
+      "coverKey": "l_etranger.png",
+      "readingProgress": 67,
+      "lastOpenedAt": "2026-08-10T21:38:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "coverKey": "dune.png",
+      "readingProgress": 34,
+      "lastOpenedAt": "2026-07-28T18:05:00Z"
+    },
+    {
+      "id": 4,
+      "title": "1984",
+      "author": "George Orwell",
+      "coverKey": "1984.png",
+      "readingProgress": 0,
+      "lastOpenedAt": "2026-07-15T11:00:00Z"
+    },
+    {
+      "id": 5,
+      "title": "Les Misérables",
+      "author": "Victor Hugo",
+      "coverKey": "les_miserables.png",
+      "readingProgress": 12,
+      "lastOpenedAt": "2026-08-03T08:22:00Z"
+    },
+    {
+      "id": 6,
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "coverKey": "sapiens.png",
+      "readingProgress": 89,
+      "lastOpenedAt": "2026-08-09T14:47:00Z"
+    }
+  ]
+}

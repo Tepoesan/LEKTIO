@@ -1,0 +1,44 @@
+/* Conteneur d’un groupe de boutons */
+.choix-boutons {
+  color: var(--couleur-texte);
+}
+
+/* Titre placé au-dessus des boutons */
+.choix-boutons p {
+  margin: 0 0 10px;
+}
+
+/* Place les boutons sur la même ligne */
+.liste-boutons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Apparence normale des boutons */
+.bouton-choix {
+  min-height: 36px;
+  padding: 8px 14px;
+
+  /* Adapte le bouton au thème sélectionné */
+  background-color: var(--couleur-fond-secondaire);
+  color: var(--couleur-texte);
+  border: 1px solid var(--couleur-bordure);
+
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Apparence du bouton sélectionné */
+.bouton-choix.actif {
+  /* Utilise la couleur d’accentuation sélectionnée */
+  background-color: var(--couleur-accent);
+  border-color: var(--couleur-accent);
+  color: #ffffff;
+}
+
+/* Focus visible pendant la navigation au clavier */
+.bouton-choix:focus-visible {
+  outline: 3px solid var(--couleur-accent);
+  outline-offset: 2px;
+}

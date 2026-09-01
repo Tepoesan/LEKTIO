@@ -1,0 +1,78 @@
+/* Contient tout le réglage du thème */
+.choix-theme {
+  width: 100%;
+}
+
+/* Titre "Thème" */
+.choix-theme > p {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+/* Place les trois boutons sur la même ligne */
+.boutons-theme {
+  display: flex;
+  gap: 12px;
+}
+
+/* Style commun aux trois boutons */
+.bouton-theme {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 90px;
+  padding: 12px 8px;
+
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Couleur du thème clair */
+.bouton-theme.clair {
+  color: #111111;
+  background-color: #ffffff;
+}
+
+/* Couleur du thème sépia */
+.bouton-theme.sepia {
+  color: #765c35;
+  background-color: #f4ecdc;
+}
+
+/* Couleur du thème sombre */
+.bouton-theme.sombre {
+  color: #ffffff;
+  background-color: #252525;
+  border-color: #252525;
+}
+
+/* Contour du bouton actuellement sélectionné */
+.bouton-theme.actif {
+  border: 2px solid #7c3aed;
+}
+
+/* Rend le clic plus visible au clavier */
+.bouton-theme:focus-visible {
+  outline: 3px solid rgba(124, 58, 237, 0.3);
+  outline-offset: 2px;
+}
+
+/* Ajuste les boutons sur les petits écrans */
+@media (max-width: 380px) {
+  .boutons-theme {
+    gap: 8px;
+  }
+
+  .bouton-theme {
+    min-height: 80px;
+    padding: 10px 6px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,44 @@
+/* Conteneur du menu de langue et de sa flèche */
+.choix-langue {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Menu permettant de sélectionner la langue */
+.choix-langue select {
+  appearance: none;
+  width: 92px;
+  height: 40px;
+  padding: 0 28px 0 18px;
+
+  /* Adapte le menu au thème sélectionné */
+  background-color: var(--couleur-carte);
+  color: var(--couleur-texte);
+  border: 1px solid var(--couleur-bordure);
+
+  border-radius: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Flèche placée à l’intérieur du menu */
+.fleche-langue {
+  position: absolute;
+  right: 16px;
+
+  /* Rend la flèche visible avec tous les thèmes */
+  color: var(--couleur-texte);
+
+  /* Permet de cliquer à travers la flèche */
+  pointer-events: none;
+}
+
+/* Affiche un contour lors de la navigation au clavier */
+.choix-langue select:focus-visible {
+  outline: 3px solid var(--couleur-accent);
+  outline-offset: 2px;
+}

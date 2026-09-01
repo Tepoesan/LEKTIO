@@ -1,0 +1,33 @@
+/* Bloc contenant un réglage avec un curseur */
+.reglage-curseur {
+  margin-top: 25px;
+
+  /* Adapte le texte au thème sélectionné */
+  color: var(--couleur-texte);
+}
+
+/* Place le nom du réglage et sa valeur sur la même ligne */
+.titre-reglage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+/* Curseur permettant de modifier la valeur */
+.reglage-curseur input {
+  width: 100%;
+
+  /* Utilise la couleur d’accentuation sélectionnée */
+  accent-color: var(--couleur-accent);
+
+  cursor: pointer;
+}
+
+/* Focus visible pendant la navigation au clavier */
+.reglage-curseur input:focus-visible {
+  outline: 3px solid var(--couleur-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}

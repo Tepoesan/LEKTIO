@@ -1,0 +1,17 @@
+/* Place l’icône et le nom de l’application sur la même ligne */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  /* Adapte l’icône et le texte au thème sélectionné */
+  color: var(--couleur-texte);
+}
+
+/* Mise en forme du nom LEKTIO */
+.logo span {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.3px;
+}

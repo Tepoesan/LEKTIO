@@ -1,0 +1,67 @@
+/* Thème clair : fond blanc et texte sombre */
+.theme-light {
+  --couleur-fond: #ffffff;
+  --couleur-carte: #ffffff;
+  --couleur-texte: #1f1f1f;
+  --couleur-bordure: #dddddd;
+  --couleur-fond-secondaire: #ffffff;
+}
+
+/* Thème sépia : couleurs chaudes pour faciliter la lecture */
+.theme-sepia {
+  --couleur-fond: #fbf2e4;
+  --couleur-carte: #fbf2e4;
+  --couleur-texte: #493b2e;
+  --couleur-bordure: #d8c8b2;
+  --couleur-fond-secondaire: #f4e7d4;
+}
+
+/* Thème sombre : fond gris foncé et texte clair */
+.theme-dark {
+  --couleur-fond: #222222;
+  --couleur-carte: #2d2d2d;
+  --couleur-texte: #f5f5f5;
+  --couleur-bordure: #505050;
+  --couleur-fond-secondaire: #383838;
+}
+
+/* Thème à contraste élevé : noir et blanc */
+.theme-contrast {
+  --couleur-fond: #000000;
+  --couleur-carte: #000000;
+  --couleur-texte: #ffffff;
+  --couleur-bordure: #ffffff;
+  --couleur-fond-secondaire: #000000;
+}
+
+/* Conteneur global qui entoure toutes les pages */
+.application {
+  min-height: 100vh;
+
+  /* Applique les couleurs du thème sélectionné */
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+
+  /* Rend le changement de thème plus fluide */
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Applique le thème aux trois pages de l’application */
+.bibliotheque,
+.lecture,
+.preferences {
+  min-height: 100vh;
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+}
+
+/* Affiche un contour pendant la navigation au clavier */
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--couleur-accent);
+  outline-offset: 3px;
+}
