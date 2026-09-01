@@ -1,3 +1,5 @@
+/* STYLE CHOIX COULEUR ACCENT
+
 /* Contient le réglage de la couleur d’accentuation */
 .choix-couleur-accent {
   width: 100%;
@@ -42,7 +44,7 @@
   outline-offset: 3px;
 }
 
-/* Réduit les espaces sur les petits écrans */
+/*RESPONSIVE Réduit les espaces sur les petits écrans */
 @media (max-width: 380px) {
   .boutons-couleur {
     justify-content: space-between;

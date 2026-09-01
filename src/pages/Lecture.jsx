@@ -1,3 +1,5 @@
+// Pages Lecture
+
 // Hook React utilisé pour gérer l’ouverture du volet
 import { useState } from "react";
 
@@ -15,23 +17,30 @@ import traductions from "../data/translations.json";
 
 // Style de la page
 import "../css/pages/Lecture.css";
+
 // Icône utilisée pour revenir à la bibliothèque
 import { CaretLeftIcon } from "@phosphor-icons/react";
 
 // Reçoit les réglages conservés dans App.jsx
 function Lecture({
   langue,
+
   police,
   setPolice,
+
   tailleTexte,
   setTailleTexte,
+
   interligne,
   setInterligne,
+
   espacementCaracteres,
   setEspacementCaracteres,
+
   largeurContenu,
   setLargeurContenu,
 }) {
+
   /*
    * Indique si le volet des paramètres est ouvert ou fermé.
    * Au chargement de la page, il est fermé.
@@ -58,7 +67,7 @@ function Lecture({
 
   /*
    * Si aucun livre ne correspond à l’id,
-   * on affiche un message et un lien de retour.
+   * on affiche un message et un lien de retour. ( vers la page par défaut )
    */
   if (!livre) {
     return (
@@ -155,6 +164,16 @@ function Lecture({
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
       </section>
 
       {/* Poignée permettant d’ouvrir le volet des paramètres */}
@@ -182,15 +201,21 @@ function Lecture({
       {voletOuvert && (
         <VoletParametres
           langue={langue}
+
           fermerVolet={() => setVoletOuvert(false)}
+
           police={police}
           setPolice={setPolice}
+
           tailleTexte={tailleTexte}
           setTailleTexte={setTailleTexte}
+
           interligne={interligne}
           setInterligne={setInterligne}
+
           espacementCaracteres={espacementCaracteres}
           setEspacementCaracteres={setEspacementCaracteres}
+          
           largeurContenu={largeurContenu}
           setLargeurContenu={setLargeurContenu}
         />

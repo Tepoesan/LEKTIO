@@ -1,3 +1,5 @@
+// Composant commun thème
+
 // Icône affichée dans les boutons de thème
 import { LightbulbIcon } from "@phosphor-icons/react";
 
@@ -9,6 +11,7 @@ import "../../css/components/ChoixTheme.css";
 
 // Reçoit le thème actuel et permet de le modifier
 function ChoixTheme({ theme, setTheme, langue }) {
+  
   // Raccourci vers les traductions des thèmes
   const textesTheme =
     traductions.translations.settings.appearance.theme;

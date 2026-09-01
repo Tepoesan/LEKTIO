@@ -1,10 +1,12 @@
+// Composant commun Choix Couleur Accent
+
 // Textes disponibles dans les trois langues
 import traductions from "../../data/translations.json";
 
 // Style du composant
 import "../../css/components/ChoixCouleurAccent.css";
 
-// Couleurs proposées à l’utilisateur
+// Couleurs proposées à l’utilisateur venant de la maquette
 const couleurs = [
   { nom: "Violet", valeur: "#6C19FF" },
   { nom: "Bleu", valeur: "#3A78C8" },
@@ -20,6 +22,7 @@ function ChoixCouleurAccent({
   setCouleurAccent,
   langue,
 }) {
+  
   // Récupère le titre traduit du réglage
   const label =
     traductions.translations.settings.appearance.accentColor[langue];

@@ -1,3 +1,5 @@
+// Composant commun TabBar
+
 // Outil utilisé pour naviguer entre les pages
 import { NavLink } from "react-router-dom";
 
@@ -24,7 +26,17 @@ function TabBar({ langue }) {
       className="tabbar"
       aria-label="Navigation principale"
     >
-      {/* La page Librairie n’a pas encore de route */}
+      
+      {/*
+      La page Librairie n’a pas encore de route définie.
+
+      Pour la rendre fonctionnelle, il faudrait :
+      1. créer une page Librairie.jsx ;
+      2. importer cette page dans App.jsx ;
+      3. ajouter une route avec le chemin "/librairie" ;
+      4. remplacer cette div par un NavLink vers "/librairie" ;
+      5. ajouter le style actif du lien dans le CSS.
+      */}
       <div className="tabbar-lien">
         <ShoppingCartIcon
           size={22}
@@ -34,7 +46,7 @@ function TabBar({ langue }) {
         <span>{textes.nav.bookstore[langue]}</span>
       </div>
 
-      {/* Retour vers la bibliothèque personnelle */}
+      {/* Retour vers la bibliothèque personnelle ( page par défaut ) */}
       <NavLink
         to="/"
         end

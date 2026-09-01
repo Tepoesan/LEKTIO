@@ -1,4 +1,4 @@
-// La page par défaut
+// La page par défaut de l'application
 
 // Hook utilisé pour gérer la recherche
 import { useState } from "react";
@@ -11,7 +11,7 @@ import Logo from "../components/communs/Logo";
 import ChoixLangue from "../components/communs/ChoixLangue";
 import TabBar from "../components/communs/TabBar";
 
-// Permet d'ouvrir la page de lecture sans recharger l'application
+// Permet d'ouvrir la page de lecture sans recharger l'application (Single Page App)
 import { Link } from "react-router-dom";
 
 // Feuille de style de la page Bibliothèque

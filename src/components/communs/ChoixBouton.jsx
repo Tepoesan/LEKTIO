@@ -1,3 +1,5 @@
+// Composant commun Bouton
+
 // Style du groupe de boutons
 import "../../css/components/ChoixBouton.css";
 

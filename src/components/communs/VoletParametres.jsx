@@ -1,3 +1,5 @@
+// Composant commun VoletParametres (utilisé dans Lecture.jsx)
+
 // Style du volet des paramètres
 import "../../css/components/VoletParametres.css";
 
@@ -12,19 +14,27 @@ import traductions from "../../data/translations.json";
 
 // Reçoit la langue et les réglages envoyés par Lecture
 function VoletParametres({
+
   langue,
+
   fermerVolet,
+
   police,
   setPolice,
+
   tailleTexte,
   setTailleTexte,
+
   interligne,
   setInterligne,
+
   espacementCaracteres,
   setEspacementCaracteres,
+
   largeurContenu,
   setLargeurContenu,
 }) {
+
   // Raccourci vers les textes traduits
   const textes = traductions.translations;
 
@@ -32,6 +42,7 @@ function VoletParametres({
   const typographie = textes.settings.typography;
 
   return (
+
     /*
      * Fond sombre affiché derrière le volet.
      * Un clic sur ce fond ferme le volet.
@@ -73,7 +84,7 @@ function VoletParametres({
           Aa {typographie.label[langue]}
         </h2>
 
-        {/* Choix de la police utilisée pour lire le livre */}
+        {/* Choix de la police utilisée pour lire le livre (serif , sans serif , monospace , OpenDys) */}
         <ChoixBouton
           label={typographie.fontFamily.label[langue]}
           valeur={police}
@@ -98,7 +109,7 @@ function VoletParametres({
           ]}
         />
 
-        {/* Curseur qui modifie la taille du texte */}
+        {/* Curseur qui modifie la taille du texte  */}
         <ReglageCurseur
           id="taille-texte"
           label={typographie.fontSize[langue]}
@@ -110,7 +121,7 @@ function VoletParametres({
           unite="px"
         />
 
-        {/* Curseur qui modifie l’espace entre les lignes */}
+        {/* Curseur qui modifie l’espace entre les lignes (interlignage) */}
         <ReglageCurseur
           id="interligne"
           label={typographie.lineHeight[langue]}

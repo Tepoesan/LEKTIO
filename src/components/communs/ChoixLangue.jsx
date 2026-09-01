@@ -1,4 +1,4 @@
-// Icône utilisée pour la flèche du menu
+// Icône Toggle utilisée pour la flèche du menu
 import { CaretDownIcon } from "@phosphor-icons/react";
 
 // Style du composant

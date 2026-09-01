@@ -1,3 +1,5 @@
+// PREFERENCES PAGE
+
 // Composants communs utilisés sur la page
 import Logo from "../components/communs/Logo";
 import ChoixLangue from "../components/communs/ChoixLangue";
@@ -50,6 +52,7 @@ function Preferences({
 
   // Remet tous les réglages à leurs valeurs initiales
   function reinitialiserPreferences() {
+    
     // Remet la langue en français
     setLangue("fr");
 

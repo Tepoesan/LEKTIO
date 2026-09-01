@@ -1,3 +1,5 @@
+// Composant commun Curseur
+
 // Style du curseur
 import "../../css/components/ReglageCurseur.css";
 
@@ -15,6 +17,7 @@ function ReglageCurseur({
   pas,
   unite = ""
 }) {
+
   return (
     // Contient le nom, la valeur et le curseur
     <div className="reglage-curseur">
@@ -31,7 +34,7 @@ function ReglageCurseur({
         </span>
       </div>
 
-      {/* Curseur avec les limites reçues dans les props */}
+      {/* Curseur avec les limites reçues dans les props ( ex : VoletParamtres ou Preferences*/}
       <input
         type="range"
         id={id}
