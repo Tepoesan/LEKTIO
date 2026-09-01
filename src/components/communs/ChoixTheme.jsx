@@ -56,7 +56,7 @@ function ChoixTheme({ theme, setTheme, langue }) {
         // si ce bouton est actuellement sélectionné
         aria-pressed={theme === "sepia"}
         >
-        {/* Ampoule décorative cachée aux lecteurs d’écran */}
+        {/* Ampoule décorative icon cachée aux lecteurs d’écran */}
         <LightbulbIcon
             size={20}
             aria-hidden="true"

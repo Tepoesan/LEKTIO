@@ -79,6 +79,25 @@
             "es": "Oscuro"
           }
         },
+
+                "contrast": {
+          "label": {
+            "fr": "Contraste",
+            "en": "Contrast",
+            "es": "Contraste"
+          },
+          "standard": {
+            "fr": "Standard",
+            "en": "Standard",
+            "es": "Estándar"
+          },
+          "high": {
+            "fr": "Élevé",
+            "en": "High",
+            "es": "Alto"
+          }
+        },
+        
         "accentColor": {
           "fr": "Couleur d'accentuation",
           "en": "Accent color",

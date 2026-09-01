@@ -25,15 +25,6 @@
   --couleur-fond-secondaire: #383838;
 }
 
-/* Thème à contraste élevé : noir et blanc */
-.theme-contrast {
-  --couleur-fond: #000000;
-  --couleur-carte: #000000;
-  --couleur-texte: #ffffff;
-  --couleur-bordure: #ffffff;
-  --couleur-fond-secondaire: #000000;
-}
-
 /* Conteneur global qui entoure toutes les pages */
 .application {
   min-height: 100vh;
@@ -64,4 +55,31 @@ select:focus-visible,
 input:focus-visible {
   outline: 3px solid var(--couleur-accent);
   outline-offset: 3px;
+}
+
+/* Contraste élevé avec le thème clair */
+.application.theme-light.contraste-eleve {
+  --couleur-fond: #ffffff;
+  --couleur-carte: #ffffff;
+  --couleur-texte: #000000;
+  --couleur-bordure: #000000;
+  --couleur-fond-secondaire: #f2f2f2;
+}
+
+/* Contraste élevé avec le thème sépia */
+.application.theme-sepia.contraste-eleve {
+  --couleur-fond: #fff4d6;
+  --couleur-carte: #fff4d6;
+  --couleur-texte: #241500;
+  --couleur-bordure: #493000;
+  --couleur-fond-secondaire: #f3dfad;
+}
+
+/* Contraste élevé avec le thème sombre */
+.application.theme-dark.contraste-eleve {
+  --couleur-fond: #000000;
+  --couleur-carte: #000000;
+  --couleur-texte: #ffffff;
+  --couleur-bordure: #ffffff;
+  --couleur-fond-secondaire: #171717;
 }

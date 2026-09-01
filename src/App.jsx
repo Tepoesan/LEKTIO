@@ -96,6 +96,11 @@ function App() {
     preferencesSauvegardees.couleurAccent ?? "#7c3aed"
   );
 
+  // Niveau de contraste utilisé dans toute l’application
+  const [contraste, setContraste] = useState(
+    preferencesSauvegardees.contraste ?? "standard"
+  );
+
   /*
    * Sauvegarde automatiquement les préférences.
    * Ce code est exécuté dès qu’un réglage est modifié.
@@ -106,6 +111,7 @@ function App() {
       langue,
       theme,
       couleurAccent,
+      contraste,
       police,
       tailleTexte,
       interligne,
@@ -140,6 +146,7 @@ function App() {
     langue,
     theme,
     couleurAccent,
+    contraste,
     police,
     tailleTexte,
     interligne,
@@ -154,7 +161,7 @@ function App() {
      * La variable CSS contient la couleur d’accentuation.
      */
     <div
-      className={`application theme-${theme}`}
+      className={`application theme-${theme} contraste-${contraste}`}
       style={{ "--couleur-accent": couleurAccent }}
     >
       <Routes>
@@ -211,6 +218,9 @@ function App() {
 
               couleurAccent={couleurAccent}
               setCouleurAccent={setCouleurAccent}
+
+              contraste={contraste}
+              setContraste={setContraste}
 
               police={police}
               setPolice={setPolice}

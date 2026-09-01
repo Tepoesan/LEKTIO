@@ -20,18 +20,28 @@ import { DatabaseIcon } from "@phosphor-icons/react";
 function Preferences({
   langue,
   setLangue,
+
   theme,
   setTheme,
+
+  contraste,
+  setContraste,
+
   police,
   setPolice,
+
   tailleTexte,
   setTailleTexte,
+
   interligne,
   setInterligne,
+
   espacementCaracteres,
   setEspacementCaracteres,
+
   largeurContenu,
   setLargeurContenu,
+
   couleurAccent,
   setCouleurAccent,
 }) {
@@ -85,6 +95,32 @@ function Preferences({
             setTheme={setTheme}
             langue={langue}
           />
+
+       {/* Choix du niveau de contraste */}
+        <ChoixBouton
+          // Traduit le titre « Contraste »
+          label={textes.settings.appearance.contrast.label[langue]}
+
+          // Propose les deux niveaux : Standar et élevé , avec leurs traductions
+          options={[
+            {
+              valeur: "standard",
+              label:
+                textes.settings.appearance.contrast.standard[langue],
+            },
+            {
+              valeur: "eleve",
+              label:
+                textes.settings.appearance.contrast.high[langue],
+            },
+          ]}
+
+          // Indique le contraste actuellement sélectionné
+          valeur={contraste}
+
+          // Modifie le contraste lorsque l’utilisateur clique
+          setValeur={setContraste}
+        />
 
           {/* Choix de la couleur utilisée pour les éléments actifs */}
           <ChoixCouleurAccent
