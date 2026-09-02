@@ -11,9 +11,13 @@ import "@fontsource/inter/400.css";
 import "@fontsource/inter/600.css";
 import "@fontsource/inter/700.css";
 
+// Police adaptée aux personnes dyslexiques
+import "@fontsource/opendyslexic/400.css";
+
+// CSS global
 import "./index.css";
 
-import "./index.css";
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

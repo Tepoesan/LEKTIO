@@ -76,6 +76,11 @@ function App() {
     preferencesSauvegardees.espacementCaracteres ?? 0
   );
 
+  // Espace entre les mots en pixels
+  const [espacementMots, setEspacementMots] = useState(
+    preferencesSauvegardees.espacementMots ?? 0
+  );
+
   // Largeur de la zone de lecture
   const [largeurContenu, setLargeurContenu] = useState(
     preferencesSauvegardees.largeurContenu ?? "normal"
@@ -116,6 +121,7 @@ function App() {
       tailleTexte,
       interligne,
       espacementCaracteres,
+      espacementMots,
       largeurContenu,
     };
 
@@ -151,6 +157,7 @@ function App() {
     tailleTexte,
     interligne,
     espacementCaracteres,
+    espacementMots,
     largeurContenu,
   ]);
 
@@ -181,7 +188,6 @@ function App() {
           path="/lecture/:id"
           element={
             <Lecture
-
               langue={langue}
 
               police={police}
@@ -193,19 +199,19 @@ function App() {
               interligne={interligne}
               setInterligne={setInterligne}
 
-              espacementCaracteres={
-                espacementCaracteres
-              }
-              setEspacementCaracteres={
-                setEspacementCaracteres
-              }
+              espacementCaracteres={espacementCaracteres}
+              setEspacementCaracteres={setEspacementCaracteres}
+
+              espacementMots={espacementMots}
+              setEspacementMots={setEspacementMots}
+
               largeurContenu={largeurContenu}
               setLargeurContenu={setLargeurContenu}
             />
           }
         />
 
-        {/* Page permettant de modifier tous les réglages */}
+       {/* Page permettant de modifier tous les réglages */}
         <Route
           path="/preferences"
           element={
@@ -231,12 +237,12 @@ function App() {
               interligne={interligne}
               setInterligne={setInterligne}
 
-              espacementCaracteres={
-                espacementCaracteres
-              }
-              setEspacementCaracteres={
-                setEspacementCaracteres
-              }
+              espacementCaracteres={espacementCaracteres}
+              setEspacementCaracteres={setEspacementCaracteres}
+
+              espacementMots={espacementMots}
+              setEspacementMots={setEspacementMots}
+
               largeurContenu={largeurContenu}
               setLargeurContenu={setLargeurContenu}
             />

@@ -41,6 +41,9 @@ function Preferences({
   espacementCaracteres,
   setEspacementCaracteres,
 
+  espacementMots,
+  setEspacementMots,
+
   largeurContenu,
   setLargeurContenu,
 
@@ -73,6 +76,7 @@ function Preferences({
     setTailleTexte(16);
     setInterligne(1.4);
     setEspacementCaracteres(0);
+    setEspacementMots(0);
     setLargeurContenu("normal");
   }
 
@@ -244,6 +248,18 @@ function Preferences({
             pas={0.1}
             unite="px"
           />
+
+          {/* Curseur permettant de modifier l’espace entre les mots */}
+            <ReglageCurseur
+              id="espacement-mots-preferences"
+              label={textes.settings.typography.wordSpacing[langue]}
+              valeur={espacementMots}
+              setValeur={setEspacementMots}
+              min={0}
+              max={10}
+              pas={1}
+              unite="px"
+            />
 
           {/* Choix de la largeur de la zone de lecture */}
           <ChoixBouton

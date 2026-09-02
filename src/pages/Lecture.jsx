@@ -37,6 +37,9 @@ function Lecture({
   espacementCaracteres,
   setEspacementCaracteres,
 
+  espacementMots,
+  setEspacementMots,
+
   largeurContenu,
   setLargeurContenu,
 }) {
@@ -146,6 +149,7 @@ function Lecture({
           fontSize: `${tailleTexte}px`,
           lineHeight: interligne,
           letterSpacing: `${espacementCaracteres}px`,
+          wordSpacing: `${espacementMots}px`,
           maxWidth: largeurs[largeurContenu],
           marginLeft: "auto",
           marginRight: "auto",
@@ -215,6 +219,9 @@ function Lecture({
 
           espacementCaracteres={espacementCaracteres}
           setEspacementCaracteres={setEspacementCaracteres}
+
+          espacementMots={espacementMots}
+          setEspacementMots={setEspacementMots}
           
           largeurContenu={largeurContenu}
           setLargeurContenu={setLargeurContenu}

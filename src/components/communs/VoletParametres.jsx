@@ -31,6 +31,9 @@ function VoletParametres({
   espacementCaracteres,
   setEspacementCaracteres,
 
+  espacementMots,
+  setEspacementMots,
+
   largeurContenu,
   setLargeurContenu,
 }) {
@@ -142,6 +145,18 @@ function VoletParametres({
           min={0}
           max={3}
           pas={0.1}
+          unite="px"
+        />
+
+        {/* Curseur qui modifie l’espace entre les mots */}
+        <ReglageCurseur
+          id="espacement-mots"
+          label={typographie.wordSpacing[langue]}
+          valeur={espacementMots}
+          setValeur={setEspacementMots}
+          min={0}
+          max={10}
+          pas={1}
           unite="px"
         />
 

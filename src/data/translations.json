@@ -157,6 +157,11 @@
           "en": "Letter spacing",
           "es": "Espaciado de letras"
         },
+        "wordSpacing": {
+          "fr": "Espacement des mots",
+          "en": "Word spacing",
+          "es": "Espaciado de palabras"
+        },
         "contentWidth": {
           "label": {
             "fr": "Largeur du contenu",
