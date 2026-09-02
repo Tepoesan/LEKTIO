@@ -6,14 +6,18 @@ import traductions from "../../data/translations.json";
 // Style du composant
 import "../../css/components/ChoixCouleurAccent.css";
 
-// Couleurs proposées à l’utilisateur venant de la maquette
+/*
+ * Liste des couleurs disponibles.
+ * La propriété "cle" permet de retrouver le nom traduit
+ * de chaque couleur dans translations.json.
+ */
 const couleurs = [
-  { nom: "Violet", valeur: "#6C19FF" },
-  { nom: "Bleu", valeur: "#3A78C8" },
-  { nom: "Turquoise", valeur: "#25989F" },
-  { nom: "Vert", valeur: "#309661" },
-  { nom: "Orange", valeur: "#E18306" },
-  { nom: "Rouge", valeur: "#DC415D" },
+  { cle: "purple", valeur: "#6C19FF" },
+  { cle: "blue", valeur: "#3A78C8" },
+  { cle: "turquoise", valeur: "#25989F" },
+  { cle: "green", valeur: "#309661" },
+  { cle: "orange", valeur: "#E18306" },
+  { cle: "red", valeur: "#DC415D" },
 ];
 
 // Reçoit la couleur actuelle et permet de la modifier
@@ -22,10 +26,15 @@ function ChoixCouleurAccent({
   setCouleurAccent,
   langue,
 }) {
-  
-  // Récupère le titre traduit du réglage
-  const label =
-    traductions.translations.settings.appearance.accentColor[langue];
+  /*
+   * Raccourci vers les traductions de la section Apparence.
+   * Il évite de répéter tout le chemin à chaque utilisation.
+   */
+  const textes =
+    traductions.translations.settings.appearance;
+
+  // Récupère le titre traduit « Couleur d’accentuation »
+  const label = textes.accentColor[langue];
 
   return (
     <div className="choix-couleur-accent">
@@ -36,6 +45,10 @@ function ChoixCouleurAccent({
       <div className="boutons-couleur">
         {couleurs.map((couleur) => (
           <button
+            /*
+             * La valeur hexadécimale est unique.
+             * Elle permet à React d’identifier chaque bouton.
+             */
             key={couleur.valeur}
             type="button"
             className={
@@ -43,12 +56,30 @@ function ChoixCouleurAccent({
                 ? "bouton-couleur actif"
                 : "bouton-couleur"
             }
+            // Applique la couleur correspondant au bouton
             style={{
               backgroundColor: couleur.valeur,
             }}
-            onClick={() => setCouleurAccent(couleur.valeur)}
-            aria-label={`Choisir la couleur ${couleur.nom}`}
-            aria-pressed={couleurAccent === couleur.valeur}
+            // Enregistre la couleur sélectionnée au clic
+            onClick={() =>
+              setCouleurAccent(couleur.valeur)
+            }
+            /*
+             * Donne au bouton un nom accessible et traduit.
+             * Exemple : « Choisir la couleur violet ».
+             */
+            aria-label={`${
+              textes.chooseAccentColor[langue]
+            } ${
+              textes.colors[couleur.cle][langue]
+            }`}
+            /*
+             * Indique aux lecteurs d’écran si cette couleur
+             * est actuellement sélectionnée.
+             */
+            aria-pressed={
+              couleurAccent === couleur.valeur
+            }
           />
         ))}
       </div>

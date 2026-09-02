@@ -7,6 +7,21 @@
         "en": "My library",
         "es": "Mi biblioteca"
       },
+      "mainNavigation": {
+        "fr": "Navigation principale",
+        "en": "Main navigation",
+        "es": "Navegación principal"
+      },
+      "chooseLanguage": {
+        "fr": "Choisir la langue de l’interface",
+        "en": "Choose the interface language",
+        "es": "Elegir el idioma de la interfaz"
+      },
+      "bookCover": {
+        "fr": "Couverture du livre",
+        "en": "Book cover",
+        "es": "Portada del libro"
+      },
       "bookstore": {
         "fr": "Librairie",
         "en": "Bookstore",
@@ -97,11 +112,47 @@
             "es": "Alto"
           }
         },
-        
         "accentColor": {
           "fr": "Couleur d'accentuation",
           "en": "Accent color",
           "es": "Color de acento"
+        },
+        "chooseAccentColor": {
+          "fr": "Choisir la couleur",
+          "en": "Choose the color",
+          "es": "Elegir el color"
+        },
+        "colors": {
+          "purple": {
+            "fr": "violet",
+            "en": "purple",
+            "es": "morado"
+          },
+          "blue": {
+            "fr": "bleu",
+            "en": "blue",
+            "es": "azul"
+          },
+          "turquoise": {
+            "fr": "turquoise",
+            "en": "turquoise",
+            "es": "turquesa"
+          },
+          "green": {
+            "fr": "vert",
+            "en": "green",
+            "es": "verde"
+          },
+          "orange": {
+            "fr": "orange",
+            "en": "orange",
+            "es": "naranja"
+          },
+          "red": {
+            "fr": "rouge",
+            "en": "red",
+            "es": "rojo"
+          }
         },
         "language": {
           "fr": "Langue d'interface",

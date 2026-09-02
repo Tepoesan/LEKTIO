@@ -106,13 +106,37 @@ function App() {
     preferencesSauvegardees.contraste ?? "standard"
   );
 
-  /*
-   * Sauvegarde automatiquement les préférences.
-   * Ce code est exécuté dès qu’un réglage est modifié.
-   */
-  useEffect(() => {
-    // Regroupe tous les réglages dans un seul objet
-    const preferences = {
+    /*
+    * Sauvegarde automatiquement les préférences.
+    * Ce code est exécuté dès qu’un réglage est modifié.
+    */
+    useEffect(() => {
+      // Regroupe tous les réglages dans un seul objet
+      const preferences = {
+        langue,
+        theme,
+        couleurAccent,
+        contraste,
+        police,
+        tailleTexte,
+        interligne,
+        espacementCaracteres,
+        espacementMots,
+        largeurContenu,
+      };
+
+      try {
+        localStorage.setItem(
+          "lektio-preferences",
+          JSON.stringify(preferences)
+        );
+      } catch (erreur) {
+        console.error(
+          "Impossible de sauvegarder les préférences :",
+          erreur
+        );
+      }
+    }, [
       langue,
       theme,
       couleurAccent,
@@ -123,43 +147,18 @@ function App() {
       espacementCaracteres,
       espacementMots,
       largeurContenu,
-    };
+    ]);
 
-    try {
-      /*
-       * JSON.stringify transforme l’objet en texte,
-       * car le localStorage ne peut enregistrer que du texte.
-       */
-      localStorage.setItem(
-        "lektio-preferences",
-        JSON.stringify(preferences)
-      );
-    } catch (erreur) {
-      /*
-       * Affiche une erreur si le navigateur ne parvient pas
-       * à sauvegarder les préférences.
-       */
-      console.error(
-        "Impossible de sauvegarder les préférences :",
-        erreur
-      );
-    }
-  }, [
     /*
-     * useEffect relance la sauvegarde dès qu’une de ces
-     * valeurs est modifiée.
-     */
-    langue,
-    theme,
-    couleurAccent,
-    contraste,
-    police,
-    tailleTexte,
-    interligne,
-    espacementCaracteres,
-    espacementMots,
-    largeurContenu,
-  ]);
+    * Met à jour la langue principale du document HTML.
+    * Les lecteurs d’écran peuvent ainsi utiliser
+    * la bonne prononciation selon la langue sélectionnée.
+    * Exemple si c'est en espagnol=> règles de prononciation espagnol
+    */
+    useEffect(() => {
+      document.documentElement.lang = langue;
+    }, [langue]);
+
 
   return (
     /*

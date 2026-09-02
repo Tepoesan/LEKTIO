@@ -89,7 +89,7 @@ function Bibliotheque({ langue, setLangue }) {
               <img
                 className="livre-couverture"
                 src={`/assets/cover/${livre.coverKey}`}
-                alt={`Couverture du livre ${livre.title}`}
+                alt={`${textes.nav.bookCover[langue]} ${livre.title}`}
               />
 
               {/* Progression actuelle de la lecture */}

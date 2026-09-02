@@ -24,7 +24,7 @@ function TabBar({ langue }) {
   return (
     <nav
       className="tabbar"
-      aria-label="Navigation principale"
+      aria-label={textes.nav.mainNavigation[langue]}
     >
       
       {/*
