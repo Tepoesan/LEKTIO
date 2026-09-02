@@ -59,8 +59,14 @@ function Preferences({
     // Remet le thème clair
     setTheme("light");
 
+    // Remet le thème clair
+    setTheme("light");
+
+    // Remet le contraste standard
+    setContraste("standard");
+
     // Remet la couleur d’accentuation violette
-    setCouleurAccent("#7c3aed");
+    setCouleurAccent("#6C19FF");
 
     // Remet les réglages de lecture par défaut
     setPolice("serif");

@@ -93,7 +93,7 @@ function App() {
 
   // Couleur utilisée pour les éléments actifs
   const [couleurAccent, setCouleurAccent] = useState(
-    preferencesSauvegardees.couleurAccent ?? "#7c3aed"
+    preferencesSauvegardees.couleurAccent ?? "#6C19FF"
   );
 
   // Niveau de contraste utilisé dans toute l’application
